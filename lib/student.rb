@@ -8,6 +8,7 @@ class Student
   def initialize(name, grade, id = nil)
     @name = name
     @grade = grade
+    @id = nil
   end
 
   def self.create_table
@@ -36,6 +37,8 @@ class Student
     SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
+
+
 
   end
 
